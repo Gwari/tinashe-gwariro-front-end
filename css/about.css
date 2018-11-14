@@ -39,22 +39,55 @@ Navigation
   color: white
 }
 
+a {
+    text-decoration: none;
+}
+
 /***********************
 Header
 ************************/
 
-.header {
+header {
   text-align: center;
-  background: ;
-  background-size: cover;
+  background:linear-gradient(#ffa949, transparent 90%),
+        linear-gradient(0deg, #fff, transparent), #ffa949 url('../img/fire.jpg');
+ /* background-size: cover;*/
   overflow: hidden;
   padding-top: 60px;
+    min-height: 450px;
+  
+}
+
+.tag {
+  background-color: #efefef;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  display: table;
+  margin: 10px auto;
+} 
+
+header .profile-image {
+  margin-top: 220px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all .5s;
+}
+header .profile-image:hover { /*This allows the mouse to hover and activate a state to transform the text or image to change*/
+  transform: scale(1.2) rotate(5deg); /*scale allows the image to enlarge and rotate creates the rotational state*/
 }
 
 /***********************
 Main Body
 ************************/
-
+.about-tinashe {
+    margin: auto;
+    max-width: 900px;
+    width: 75%;
+    text-align: center;
+}
 
 
 /***********************
@@ -66,3 +99,52 @@ Footer
 /***********************
 Responsive for tablet and screan sizes
 ************************/
+/* Styles for larger screens */
+@media screen and (min-width: 720px) {
+  
+  .flex {
+      display: flex;
+      max-width: 1200px;
+      justify-content: space-around;
+      margin: 0 auto;
+  }
+
+  header {
+    min-height: 450px;
+  }
+
+  .nav {
+    max-width: 1200px;
+  }
+
+  .nav .name {
+    display: block;
+    margin-right: auto;
+    color: white;
+  }
+
+  main {
+    padding-top: 50px;
+  }
+
+  main p {
+    line-height: 1.6em;
+  }
+
+  footer {
+    font-size: 1.3em;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+    
+    h3 {
+        color: darkred;
+        letter-spacing: 2px;
+    }
+    
+    .card-title {
+        text-align: center;
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+}
